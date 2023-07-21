@@ -14,6 +14,13 @@ import java.util.UUID;
 public class UserRepository extends BaseRepository<User,UUID> {
     private static final UserRepository repository=new UserRepository();
 
+    public Optional<User>findByPhoneNumber(String phoneNumber){
+        return entities.stream().
+                filter(user -> user.getPhoneNumber()
+                        .equals(phoneNumber))
+                        .findFirst();
+    }
+
     public static UserRepository getInstance(){
         return repository;
     }

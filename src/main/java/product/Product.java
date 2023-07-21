@@ -16,12 +16,7 @@ public class Product extends BaseEntity<UUID> {
    private double price;
    private boolean isAvailable;
 
-   public Product(UUID restaurantId, String name, double price, boolean isAvailable) {
-      this.restaurantId = restaurantId;
-      this.name = name;
-      this.price = price;
-      this.isAvailable = isAvailable;
-   }
+
 
    public Product(UUID uuid, LocalDateTime created, LocalDateTime modified, User createdBy, User modifiedBy, UUID restaurantId, String name, double price, boolean isAvailable) {
       super(uuid, created, modified, createdBy, modifiedBy);

@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public abstract class BaseRepository<ENTITY extends BaseEntity<ID>,ID> implements Repository<ENTITY,ID>{
 
-    private final  List<ENTITY> entities=new ArrayList<>();
+    public final  List<ENTITY> entities=new ArrayList<>();
 
 
     @Override

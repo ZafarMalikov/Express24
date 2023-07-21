@@ -9,7 +9,6 @@ import java.util.UUID;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-
 @NoArgsConstructor
 public class User extends BaseEntity<UUID> {
    private String name;
@@ -17,11 +16,11 @@ public class User extends BaseEntity<UUID> {
    private double balance;
    private String password;
    private String phoneNumber;
-   private Role roel;
+   private Role roel=Role.USER;
    private LocalDate employmentDate;
    private double salary;
    private UUID restaurantId;
-
+   @Builder
    public User(UUID id, LocalDateTime created, LocalDateTime modified, User createdBy, User modifiedBy, String name, String surname, double balance, String password, String phoneNumber, Role roel, LocalDate employmentDate, double salary, UUID restaurantId) {
       super(id, created, modified, createdBy, modifiedBy);
       this.name = name;

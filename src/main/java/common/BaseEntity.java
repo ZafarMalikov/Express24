@@ -1,6 +1,7 @@
 package common;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import user.User;
@@ -11,6 +12,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+
 public class BaseEntity<ID> {
    private ID id;
    private LocalDateTime created;

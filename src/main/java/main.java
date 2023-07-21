@@ -1,17 +1,18 @@
 import com.github.javafaker.Faker;
 import restaurant.Restaurant;
+import ui.MainUi;
 import user.User;
 import user.UserRepository;
 
+import java.util.Scanner;
 import java.util.UUID;
 
 public class main {
+        public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Faker faker = new Faker();
+        MainUi mainUi = new MainUi();
 
-        UserRepository instance = UserRepository.getInstance();
-        instance.add(new User(UUID.randomUUID(),faker.date()));
-
+        mainUi.start();
 
     }
 }
