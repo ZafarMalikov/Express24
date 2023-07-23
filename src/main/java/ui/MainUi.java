@@ -103,6 +103,7 @@ public class MainUi {
         User user = User.builder()
                 .name(name)
                 .surname(surname)
+                .id(UUID.randomUUID())
                 .phoneNumber(phoneNumber)
                 .balance(balance)
                 .created(LocalDateTime.now())

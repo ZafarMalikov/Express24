@@ -2,6 +2,7 @@ package restaurant;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public class RestaurantService {
     private static final RestaurantService restaurantService=new RestaurantService();
@@ -26,5 +27,9 @@ public class RestaurantService {
 
     public static RestaurantService getInstance(){
         return restaurantService;
+    }
+
+    public Optional<Restaurant> findByRestaurantId(UUID restaurantId) {
+      return   repository.findById(restaurantId);
     }
 }
